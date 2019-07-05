@@ -1,10 +1,10 @@
 const fetchData = (nodes, edges, graph, that) => {
 	
 	return new Promise((resolve, reject) => {
-		const p1 = fetch('http://localhost:3000/pod');
-		const p2 = fetch('http://localhost:3000/service');
-		const p3 = fetch('http://localhost:3000/ingress');
-		const p4 = fetch('http://localhost:3000/daemonset')
+		const p1 = fetch(window.location.href + 'pod');
+		const p2 = fetch(window.location.href + 'service');
+		const p3 = fetch(window.location.href + 'ingress');
+		const p4 = fetch(window.location.href + 'daemonset')
 
 		// Waits for all the fetch to resolve
 		Promise.all([p1, p2, p3, p4])
